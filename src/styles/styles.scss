@@ -1,0 +1,101 @@
+@import './colors.scss';
+
+.App {
+    font-family: sans-serif;
+    text-align: center;
+  }
+
+  .game-container {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    height:100vh;
+    width:100vw;
+    background-color:#13112A;
+  }
+
+  .gl-title {
+    display:flex;
+    align-items:center;
+    font-size:23px;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing:1px;
+    margin-bottom:10px;
+    .ship-icon {
+      height:35px;
+      width:auto;
+      margin-left:10px;
+    }
+  }
+
+  .scoreboard {
+    display:flex;
+    justify-content:space-evenly;
+    border:1px solid rgb(64, 42, 78);
+    background-color: rgb(97, 51, 134);
+    box-shadow:0 2px 0 rgb(64, 42, 78);
+    font-size:18px;
+    color:white;
+    text-shadow: 0 2px $scoreBrdGrey;
+    font-family: monospace; 
+    letter-spacing:1px;
+    padding:8px;
+    width:303px;
+    margin-bottom:10px;
+    .col {
+      display:flex;
+      flex-direction:column;
+      width:90px; 
+      border:1px solid $scoreBrdGrey;
+      background-color:rgb(52, 49, 95);
+      box-shadow: 0 1px 0 $scoreBrdGrey;
+      padding:5px;
+      .score {
+        font-size:20px;
+        font-weight:bold;
+      }
+    }
+  }
+
+  .board {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .board .col {
+    display:flex;
+    justify-content:center;
+    width: 30px;
+    height: 30px;
+    margin:1px;
+    margin-bottom:4px;
+    background-color: $bgGrey;  
+    box-shadow:0 2px 0 $scoreBrdGrey;
+    color:white;
+    cursor: pointer;
+  }
+
+  .board .col:active {
+    position: relative;
+    top:1px;
+  }
+
+  .missed,.hit {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:100%;
+    height:100%;
+    background-color:$missedBlue;
+    img {
+      height:80%;
+      width:80%;
+    }
+  }
+
+  .hit {
+    background-color:$hitRed;
+  }
+  
